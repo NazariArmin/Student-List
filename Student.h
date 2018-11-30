@@ -8,18 +8,23 @@
 #include <iostream>
 class Student {
 private:
-    std::string firstName_, lastName_, id_;
+    std::string firstName_;
+    std::string lastName_;
+    std::string id_;
 public:
-    Student();
+    Student(std::string firstName = "Empty", std::string lastName = "Empty", std::string id = "Empty");
     ~Student();
 
-    std::string fristName()const;
+    std::string firstName()const;
     std::string lastName()const;
     std::string id()const;
 
     void firstName(std::string const& firstName);
     void lastName(std::string const& lastName);
     void id(std::string const & id);
+
+    void print();
+//    Student &operator ==(Student const& second);
 };
 
 

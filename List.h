@@ -4,19 +4,34 @@
 
 #ifndef STUDENT_LIST_LIST_H
 #define STUDENT_LIST_LIST_H
-
-#include "Node.h"
+#include <iostream>
 template <class Type>
 class List {
+    class Node{
+        Node():
+        Type(data),
+        link(NULL)
+        {}
+        Node(Type data, Node* link):
+        data(data),
+        link(link)
+        {}
+        ~Node(){
+            delete link;
+        }
+        Type data;
+        Node* link;
+    };
 private:
-    Node<Type>* head_;
+    Node* head_;
 
 public:
 //    Node* head()const;
-
     List();
     ~List();
-
+    void push(Type const& data);
+//    bool get(Type const& key)const;
+    Type pop()const;
 };
 
 

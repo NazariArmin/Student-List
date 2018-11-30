@@ -3,16 +3,19 @@
 //
 
 #include "Student.h"
-Student::Student():
-firstName_("Empty"),
-lastName_("Empty"),
-id_("Empty")
-{}
 
+Student::Student(std::string firstName, std::string lastName, std::string id):
+firstName_(firstName),
+lastName_(lastName),
+id_(id)
+{}
 Student::~Student()
-{}
-
-std::string Student::fristName() const
+{
+    firstName_ ="";
+    lastName_ = "";
+    id_="";
+}
+std::string Student::firstName() const
 {
     return firstName_;
 }
@@ -40,3 +43,9 @@ void Student::id(std::string const &id)
     this->id_ = id;
 }
 
+void Student::print()
+{
+    std::cout << "full name : "<< this->firstName_ + this->lastName_<<std::endl;
+    std::cout << "student id" << this->id_<<std::endl;
+
+}
