@@ -6,8 +6,10 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(Student_List
-        src/List.h
+        src/linked\ list/List.h
         src/main.cpp
         src/Student.cpp
         src/Student.h
-        src/Node.h src/StudentList.cpp src/StudentList.h)
+        src/linked\ list/Node.h 
+	src/StudentList.cpp 
+	src/StudentList.h)
