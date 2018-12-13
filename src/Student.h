@@ -18,7 +18,8 @@ public:
     std::string firstName()const;
     std::string lastName()const;
     std::string id()const;
-
+    bool operator == (Student const& student);
+    bool operator != (Student const& student);
     void print();
 //    Student &operator ==(Student const& second);
 };
