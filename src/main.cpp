@@ -126,7 +126,7 @@ void MainMenu()
         return;
       default:
         system("clear");
-        std::cout << "           ERROR    ----->    please choose from available characters (a, b ,c ,d ,e)"
+        std::cout << "           ERROR    --------->    please choose from available option (a, b ,c ,d ,e)     <---------"
                   << std::endl;
         usleep(1000000 * 3);
         MainMenu();
