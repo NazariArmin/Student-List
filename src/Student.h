@@ -5,6 +5,7 @@
 #ifndef STUDENT_LIST_STUDENT_H
 #define STUDENT_LIST_STUDENT_H
 
+#include <fstream>
 #include <iostream>
 class Student {
 private:
@@ -21,7 +22,7 @@ public:
     bool operator == (Student const& student);
     bool operator != (Student const& student);
     void print();
-//    Student &operator ==(Student const& second);
+    void writeTo(std::ofstream & outFile);
 };
 
 

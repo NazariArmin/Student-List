@@ -34,6 +34,12 @@ void Student::print()
     std::cout << "student id : " << this->id_;
     std::cout << "\n\n\n";
 }
+void Student::writeTo(std::ofstream &outFile)
+{
+  outFile << "full name : "<< this->firstName_ + " " + this->lastName_<<std::endl;
+  outFile <<  "student id : " << this->id_;
+  outFile << "\n\n\n";
+}
 bool Student::operator==(Student const &student)
 {
     return (this->firstName_ == student.firstName_ && this->lastName_ == student.lastName_ && this->id_ == student.id_);
