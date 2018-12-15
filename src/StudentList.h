@@ -14,6 +14,7 @@ public:
     void showList();
     void showTop();
     std::vector<Student> searchStudents(Student const& Student);
+    void writeTo(std::ofstream & outFile);
 private:
     bool isThere(Student const& keyStudent, Student const& listStudent);
 };

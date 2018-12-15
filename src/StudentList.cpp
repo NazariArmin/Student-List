@@ -60,6 +60,20 @@ std::vector<Student> StudentList::searchStudents(Student const &keyStudent)
 
 
 }
+void StudentList::writeTo(std::ofstream &outFile)
+{
+  if(head_)
+  {
+    Node<Student> *p = head_;
+    while (p->link() != head_) {
+      p->data().writeTo(outFile);
+      p = p->link();
+    }
+    p->data().writeTo(outFile);
+    return;
+  }
+}
+
 bool StudentList::isThere(Student const& keyStudent, Student const& listStudent)
 {
   return (keyStudent.firstName() == listStudent.firstName()||keyStudent.firstName() == "0" )&&(keyStudent.lastName() == listStudent.lastName()||keyStudent.lastName() == "0")&&(keyStudent.id() == listStudent.id()||keyStudent.id() == "0");
