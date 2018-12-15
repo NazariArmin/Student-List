@@ -10,6 +10,23 @@ int main() {
   MainMenu();
   return 0;
 }
+void writeToFile()
+{
+  if(myList.size())
+  {
+    std::ofstream out;
+    std::cout << "file name : ";
+    std::string fileName;
+    std::cin >> fileName;
+    out.open("../file/" + fileName);
+    myList.writeTo(out);
+    out.close();
+    std::cout<<"                 --------->   your list saved to file/" + fileName + " <---------" << std::endl;
+  }
+  else
+    std::cout<<"             ---------->  there is no student in list to save it <----------"<<std::endl;
+  usleep(1000000);
+}
 void addStudent()
 {
   std::string firstName;
@@ -91,7 +108,7 @@ void printMainMenu(){
   std::cout<<"b : Show all of List"<< std::endl;
   std::cout<<"c : Show top of List"<< std::endl;
   std::cout<<"d : Search student"<< std::endl;
-  std::cout<<"p : print to out file"<<std::endl;
+  std::cout<<"p : save to file"<<std::endl;
   std::cout<<"e : Exit"<< std::endl;
 
 }
@@ -120,6 +137,10 @@ void MainMenu()
       case 'd':
         system("clear");
         searchStudent();
+        break;
+      case 'p':
+        system("clear");
+        writeToFile();
         break;
       case 'e':
         system("clear");
