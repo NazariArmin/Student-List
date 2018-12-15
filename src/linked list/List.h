@@ -13,7 +13,7 @@ class List {
 protected:
     Node<Type> *head_;
     int size_;
-    bool isempty();
+    bool isNotEmpty();
 
 public:
 //    Node* head()const;
@@ -100,9 +100,8 @@ Type List<Type>::back()
   return data;
 }
 template <class Type>
-bool List<Type>::isempty()
-{
-  return !head_;
+bool List<Type>::isNotEmpty(){
+  return head_;
 }
 template <class Type>
 void List<Type>::remove(Type key)

@@ -7,7 +7,7 @@
 void StudentList::showList()
 {
   int number = 1;
-  if(head_){
+  if(isNotEmpty()){
     std::cout << number << "   : "<<std::endl;
     head_->data().print();
     number++;
@@ -28,7 +28,7 @@ void StudentList::showList()
 }
 void StudentList::showTop()
 {
-  if(head_)
+  if(isNotEmpty())
   {
     back().print();
     return;
@@ -38,7 +38,7 @@ void StudentList::showTop()
 std::vector<Student> StudentList::searchStudents(Student const &keyStudent)
 {
   std::vector<Student> students;
-  if(head_)
+  if(isNotEmpty())
   {
     if(isThere(keyStudent,head_->data()))
     {
@@ -62,7 +62,7 @@ std::vector<Student> StudentList::searchStudents(Student const &keyStudent)
 }
 void StudentList::writeTo(std::ofstream &outFile)
 {
-  if(head_)
+  if(isNotEmpty())
   {
     Node<Student> *p = head_;
     while (p->link() != head_) {

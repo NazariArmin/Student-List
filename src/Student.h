@@ -22,6 +22,7 @@ public:
     bool operator == (Student const& student);
     bool operator != (Student const& student);
     void print();
+    //write this student to file
     void writeTo(std::ofstream & outFile);
 };
 
