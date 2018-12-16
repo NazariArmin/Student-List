@@ -18,7 +18,7 @@ void writeToFile()
     std::cout << "file name : ";
     std::string fileName;
     std::cin >> fileName;
-    out.open("../file/" + fileName);
+    out.open("../db/" + fileName);
     myList.writeTo(out);
     out.close();
     std::cout<<"                 --------->   your list saved to file/" + fileName + " <---------" << std::endl;
@@ -132,6 +132,7 @@ void MainMenu()
         showAllOfList();
         break;
       case 'c':
+	system("clear");
         showTopOfList();
         break;
       case 'd':
