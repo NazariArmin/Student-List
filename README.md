@@ -1,12 +1,50 @@
 # Student-List
-implementation a link-list that saved the profile of student
+Implementation of a link-list that saved the profile of student written in C++
 
-## make
+## Requirements
 
-creat folder in root project in set name to build
+Make sure you have `cmake` installed on your machine:
 
-cd to build and write "cmake.." in terminal 
+Linux: 
+```bash
+  sudo apt install cmake 
+```
 
-then write "make" 
+OSX:
+```bash
+  brew install cmake
+```
 
-and enter "./Student_List" in terminal for run it
+
+## Compiling
+
+Clone the project: 
+```bash
+  git clone git@github.com:RmnNzr/Student-List.git
+```
+
+Make sure your are in right directory:
+```bash
+  cd Student-List/
+```
+
+Change your current working directory to `build/`:
+```bash
+  cd build/
+```
+
+Simply run `cmake ..` to generate `Makefile` and other stuff:
+```bash
+  cmake ..
+```
+Then run `make` to compile the whole source code:
+```bash
+  make
+```
+
+## Running
+
+Now you can run the `Student_List` executable file to use the compiled code:
+```bash
+  ./Student_List
+```
