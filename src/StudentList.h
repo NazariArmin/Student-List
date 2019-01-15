@@ -5,7 +5,7 @@
 #ifndef STUDENT_LIST_STUDENTLIST_H
 #define STUDENT_LIST_STUDENTLIST_H
 
-#include "linked list/List.h"
+#include "List.h"
 #include "Student.h"
 #include <vector>
 class StudentList : public List<Student>
